@@ -20,7 +20,7 @@ export class EditorialListComponent implements OnInit {
     /**
      * The list of editorials which belong to the BookStore
      */
-    editorials: Editorial[] = [new Editorial(1, "Editorial1"), new Editorial(1, "Editorial2")];
+    editorials: Editorial[] ;
 
     /**
      * Asks the service to update the list of editorials
@@ -34,6 +34,6 @@ export class EditorialListComponent implements OnInit {
      * This method will be called when the component is created
      */
     ngOnInit() {
-       
+       this.getEditorials();
     }
 }

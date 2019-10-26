@@ -4,8 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Editorial } from './editorial';
 import { Observable } from 'rxjs';
 
-const API_URL = "../../assets/";
-const editorials = 'editorials.json';
+const API_URL = "api/editorials";
+
 
 /**
 * The service provider for everything related to editorials
@@ -21,7 +21,7 @@ export class EditorialService {
     
   
     getEditorials() : Observable<Editorial[]> {
-        return this.http.get<Editorial[]>(API_URL + editorials);
+        return this.http.get<Editorial[]>(API_URL);
     }
     
 }
